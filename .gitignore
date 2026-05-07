@@ -29,7 +29,7 @@ env/
 
 # Project specific artifacts
 .gemini/
+GEMINI.md
 results/
 tmp/
 *.log
-GEMINI.md
