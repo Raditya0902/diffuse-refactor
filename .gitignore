@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# C extensions
+*.so
+
+# Environment variables
+.env
+
+# Model weights & Checkpoints (Huggingface usually caches to ~/.cache, but just in case)
+*.safetensors
+*.bin
+*.ckpt
+*.pt
+*.pth
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific artifacts
+.gemini/
+results/
+tmp/
+*.log

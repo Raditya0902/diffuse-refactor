@@ -1,0 +1,34 @@
+# =============================================================================
+# requirements.txt — DLLM Refactoring Agent
+# Install on GCP VM inside conda env:  pip install -r requirements.txt
+# PyTorch installed separately via setup_env.sh (needs --index-url for CUDA)
+# =============================================================================
+
+# ── Core ML ──────────────────────────────────────────────────────────────────
+transformers>=4.45
+accelerate>=0.30
+bitsandbytes>=0.43       # 4-bit / 8-bit quantization (fallback for smaller GPUs)
+datasets
+evaluate
+sentencepiece
+protobuf
+huggingface_hub
+
+# ── AST / Code Analysis ───────────────────────────────────────────────────────
+tree-sitter>=0.22
+tree-sitter-python
+zss                      # Zhang-Shasha tree-edit distance (AST structural distance)
+astunparse               # Python AST → source code (for diff generation)
+
+# ── Evaluation & Testing ──────────────────────────────────────────────────────
+pytest
+pytest-json-report       # structured JSON output for /results/ logging
+black                    # code formatter (pre/post refactor normalization)
+isort
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+tqdm
+rich                     # pretty terminal output for eval harness
+loguru                   # structured logging
+numpy
+pandas                   # aggregate metrics / CSV summaries
